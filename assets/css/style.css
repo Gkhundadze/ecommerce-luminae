@@ -1,0 +1,207 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nav-color: rgba(85, 85, 85, 1);
+    --text-primary:  rgba(255, 255, 255, 1);
+    --text-secondary: rgba(85, 85, 85, 1);
+    --text-selected: rgba(255, 122, 0, 1);
+    --gray: rgba(38, 38, 38, 1);
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-evenly {
+    justify-content: space-evenly;
+}
+.align-center {
+    align-items: center;
+}
+
+
+.bg-gray {
+    background-color: var(--gray);
+}
+
+
+header {
+    & .header-wrapper {
+            padding-block: 30px;
+            & .logo-wrapper {
+                & img {}
+    
+                & span {
+                    font-size: 32px;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+            }
+    
+            & .search-wrapper {
+                & input {
+                    padding: 8px 12px;
+                    min-width: 345px;
+                }
+    
+                & img {
+                    position: absolute;
+                    top: 50%;
+                    right: 12px;
+                    transform: translateY(-50%);
+                }
+    
+                & select {
+                    position: absolute;
+                    top: 50%;
+                    right: 56px;
+                    transform: translateY(-50%);
+    
+                    & option {
+                        text-transform: capitalize;
+                    }
+                }
+            }
+    
+            & .navigation-wrapper {
+                & nav {
+                    & ul {
+                        gap: 12px;
+    
+                        & li {
+                            & a {
+                                font-size: 20px;
+                                text-transform: capitalize;
+                                color: var(--nav-color);
+                            }
+                        }
+                    }
+                }
+            }
+    
+            & .socials-wrapper {
+                gap: 12px;
+            }
+        }
+    & .header-wrapper {
+        & .categories-wrapper {
+            gap: 20px;
+                & .categories {
+                    gap: 4px;
+                    & img {
+                        width: 24px;
+                        height: 24px;
+                    }
+        
+                    & span {
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: var(--text-primary);
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+
+
+
+        & .main-offer {
+            & .offer-card {
+                gap: 10px;
+                & .offer-image-wrapper {
+                    & img {
+
+                    }
+                }
+                & .offer-text-content {
+                    & p:first-child {
+                        color: var(--text-primary);
+                        margin-bottom: 8px;
+                    }
+                    & p:last-child {
+                        color: var(--text-secondary);   
+                    }
+                }
+            }
+        }
+        & .cta-wrapper {
+            & .cta-login {
+                gap: 20px;
+                & a {
+                    color: var(--text-primary);
+                    text-transform: capitalize;
+                    gap: 4px;
+                    & img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                    & span {
+                        font-size: 20px;
+                    }
+                }
+                
+            }
+        }
+    }
+    & .ecommerce-categories {
+        padding-block: 16px;
+        & li {
+            position: relative;
+            font-size: 20px;
+            color: var(--text-secondary);
+            text-transform: capitalize;
+            cursor: pointer;
+            transition-duration: 0.3s;
+            &:hover {
+                color: var(--text-selected);
+                & .submenu {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            & .submenu {
+                position: absolute;
+                top: 26px;
+                left: 0;
+                width: 600px;
+                height: 400px;
+                background-color: var(--gray);
+                visibility: hidden;
+                opacity: 0;
+                transition-duration: 0.3s;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

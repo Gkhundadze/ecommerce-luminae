@@ -12,6 +12,12 @@
     --text-secondary: rgba(85, 85, 85, 1);
     --text-selected: rgba(255, 122, 0, 1);
     --gray: rgba(38, 38, 38, 1);
+    --tritary-text: rgba(157, 157, 157, 1);
+    --text-off: rgba(255, 46, 0, 1);
+    --off-tag: rgba(255, 46, 0, 1);
+}
+body{
+    overflow-x: hidden;
 }
 ul {
     list-style: none;
@@ -34,11 +40,20 @@ a {
 .justify-between {
     justify-content: space-between;
 }
+.justify-center {
+    justify-content: center;
+}
 .justify-evenly {
     justify-content: space-evenly;
 }
 .align-center {
     align-items: center;
+}
+.dir-col {
+    flex-direction: column;
+}
+.h-100 {
+    height: 100%;
 }
 
 
@@ -160,6 +175,13 @@ header {
                     & span {
                         font-size: 20px;
                     }
+                    & .counter {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        background-color: rgba(61, 196, 126, 1);
+                        color: #fff;
+                    }
                 }
                 
             }
@@ -191,6 +213,169 @@ header {
                 visibility: hidden;
                 opacity: 0;
                 transition-duration: 0.3s;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+
+
+
+
+main {
+    & section:not(:first-child) {
+        margin-block: 60px;
+    }
+    & .essentials {
+        min-height: 460px;
+        & .essentials-left {
+            background-image: url(../img/left.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 40%;
+        }
+        & .essentials-right {
+            background-color: rgba(85, 162, 255, 1);
+            width: 60%;
+            color: var(--text-primary);
+            & h1 {
+                font-size: 32px;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-bottom: 32px;
+            }
+            & p {
+                margin-bottom: 32px;
+                font-size: 28px;
+            }
+            & button {
+                background-color: rgba(65, 114, 220, 1);
+                padding-block: 18px;
+                padding-inline: 60px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                gap: 8px;
+                color: var(--text-primary);
+                & img {
+                    width: 24px;
+                    height: 24px;
+                    display: block;
+                }
+                & span {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        & .essential-off {
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            & .essential-header {
+                padding: 36px;
+                font-size: 20px;
+                font-weight: bold;
+                background-color: #fff;
+                & p {
+                    text-transform: capitalize;
+                    margin-bottom: 12px;
+                }
+                & span {
+                    color: rgba(255, 46, 0, 1);
+                }
+            }
+            & .essential-footer {
+                background-color: var(--gray);
+                padding-block: 10px;
+                & p {
+                    font-size: 14px;
+                    color: white;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+
+.flash-sales {
+    & h2 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    & a {
+        font-size: 12px;
+        color: var(--text-secondary);
+    }
+    & .products-wrapper {
+        margin-top: 3rem;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        & .product-card {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            & .countdown-wrapper {
+                text-align: center;
+                & > span {
+                    color: var(--tritary-text);
+                    font-weight: 800;
+                }
+                .hour-label, .min-label, .sec-label {
+                    color: var(--tritary-text);
+
+                }
+            }
+            & .image-wrapper {
+                & img {
+                    display: block;
+                    width: 300px;
+                }
+            }
+            & .content-wrapper {
+                & h3 {
+                    margin-bottom: 6px;
+                }
+                & p {
+                    margin-bottom: 6px;
+
+                }
+                & .rating {
+                    margin-bottom: 6px;
+                    gap: 8px;
+                    & .stars {
+                        & img {
+                            width: 10px;
+                            height: 10px;
+                            display: block;
+                        }
+                    }
+                    & .reviews {
+
+                    }
+                }
+                & .price {
+                    gap: 8px;
+                    & .current {
+                        color: var(--text-off);
+                    }
+                    & .old {
+                        color: var(--text-secondary);
+                    }
+                    & .discount {
+                        color: var(--text-primary);
+                        background-color: var(--off-tag);
+                        border-radius: 3px;
+                        padding: 2px 4px;
+                    }
+                }
             }
         }
     }
@@ -203,5 +388,45 @@ header {
 
 
 
+.cart{
 
+    & .list {
 
+        & h1 {
+
+        }
+        & ul {
+
+            & li {
+                    gap: 80px;
+
+                & .left {
+                    gap: 80px;
+                    & img {
+                        height: 70px;
+                        display: block;
+                    }
+                    & .title {
+
+                    }
+                    & .price {
+
+                    }
+                }
+                & .right {
+                    gap: 80px;
+
+                    & .quantity {
+                        
+                    }
+                    & .total {
+
+                    }
+                    & .remove {
+
+                    }
+                }
+            }
+        }
+    }
+}

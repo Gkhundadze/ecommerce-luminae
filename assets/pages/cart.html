@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
-    <header>
+     <header>
         <div class="container">
             <div class="header-wrapper flex justify-between align-center">
                 <div class="logo-wrapper flex align-center">
-                    <img src="assets/img/logo.svg" alt="site logo">
+                    <img src="../img/logo.svg" alt="site logo">
                     <span>luminae</span>
                 </div>
                 <div class="search-wrapper">
                     <div class="relative">
                         <input type="text">
-                        <img src="assets/img/icons/search.svg" alt="search icon">
+                        <img src="../img/icons/search.svg" alt="search icon">
                         <select name="category-select" id="">
                             <option value="all-categories" selected>all-categories</option>
                             <option value="electronics">electronics</option>
@@ -48,13 +46,13 @@
                 <div class="socials-wrapper flex align-center">
 
                     <a href="#">
-                        <img src="assets/img/icons/instagram.svg" alt="instagram social icon">
+                        <img src="../img/icons/instagram.svg" alt="instagram social icon">
                     </a>
                     <a href="#">
-                        <img src="assets/img/icons/facebook.svg" alt="facebook social icon">
+                        <img src="../img/icons/facebook.svg" alt="facebook social icon">
                     </a>
                     <a href="#">
-                        <img src="assets/img/icons/telegram.svg" alt="telegram social icon">
+                        <img src="../img/icons/telegram.svg" alt="telegram social icon">
                     </a>
                 </div>
             </div>
@@ -64,7 +62,7 @@
                 <div class="flex justify-between align-center">
                         <div class="categories-wrapper flex align-center">
                             <div class="categories flex align-center">
-                                <img src="assets/img/icons/categories.svg" alt="categories icon">
+                                <img src="../img/icons/categories.svg" alt="categories icon">
                                 <span>categories</span>
                             </div>
                             <div>
@@ -83,7 +81,7 @@
                     <div class="main-offer">
                     <article class="offer-card flex align-center">
                         <div class="offer-image-wrapper">
-                            <img src="assets/img/men-cosmetic.png" alt="men cosmetic">
+                            <img src="../img/men-cosmetic.png" alt="men cosmetic">
                         </div>
                         <div class="offer-text-content">
                             <p>Weekly Men's Toiletries Coupons.</p>
@@ -94,15 +92,15 @@
                 <div class="cta-wrapper">
                     <div class="cta-login flex align-center">
                         <a href="#" class="flex align-center">
-                            <img src="assets/img/icons/sign-in.svg" alt="sign in icon">
+                            <img src="../img/icons/sign-in.svg" alt="sign in icon">
                             <span>sign in</span>
                         </a>
                         <a href="#" class="flex align-center">
-                            <img src="assets/img/icons/favorites.svg" alt="favorites icon">
+                            <img src="../img/icons/favorites.svg" alt="favorites icon">
                             <span>favorites</span>
                         </a>
-                        <a href="assets/pages/cart.html" class="flex align-center">
-                            <img src="assets/img/icons/cart.svg" alt="shopping cart icon">
+                        <a href="../pages/cart.html" class="flex align-center">
+                            <img src="../img/icons/cart.svg" alt="shopping cart icon">
                             <span>cart</span>
                             <div class="counter flex align-center justify-center">0</div>
                         </a>
@@ -147,47 +145,46 @@
             </ul>
         </div>
     </header>
-
     <main>
-        <section class="essentials flex relative">
-            <div class="essentials-left"></div>
-            <div class="essentials-right">
-                <div class="flex dir-col align-center justify-center h-100">
-                    <h1>Kimonos, Caftans & Pareos</h1>
-                    <p>Poolside glam included From $4.99</p>
-                    <button class="flex align-center">
-                        <img src="assets/img/icons/shop-now.svg" alt="shop now icon">
-                        <span>Shop now</span>
-                    </button>
-                </div>
-            </div>
-            <div class="essential-off">
-                    <div class="essential-header">
-                        <p>Summer Essentials</p>
-                        <span>20% off</span>
+        <div class="container">
+            <section class="cart">
+                <div class="flex">
+                    <div class="list">
+                        <h1>cart</h1>
+                        <ul>
+                            <li class="flex">
+                                <div class="left flex align-center ">
+                                    <div class="flex align-center">
+                                        <img src="../img/cart/mango-set.png" alt="mango set product image">
+                                        <h2 class="title">2 Pieces Mango set- Regular fit</h2>
+                                    </div>
+                                    <span class="price">
+                                        $ 25
+                                    </span>
+                                </div>
+                                <div class="right flex align-center">
+                                    <div class="quantity">
+                                        <button>-</button>
+                                        <input type="text">
+                                        <button>+</button>
+                                    </div>
+                                    <div class="total">
+                                        $ 25
+                                    </div>
+                                    <button class="remove">
+                                        <img src="../img/icons/trash.svg" alt="trash icon">
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="essential-footer">
-                        <p>19 Jul-30 Jul</p>
+                    <div class="summary">
+
                     </div>
-            </div>
-        </section>
-        <section class="flash-sales">
-            <div class="container">
-                <div class="flex align-center justify-between">
-                    <h2>Flash Sales</h2>
-                    <a href="#">See All</a>
                 </div>
-                <div class="products-wrapper flex align-center justify-between">
-                   
-                </div>
-            </div>
-        </section>
+    
+            </section>
+        </div>
     </main>
-
-    <footer>
-
-    </footer>
-    <script src="assets/js/app.js"></script>
 </body>
-
 </html>

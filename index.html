@@ -2,88 +2,87 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
     <header>
+        <!-- Top header -->
         <div class="container">
             <div class="header-wrapper flex justify-between align-center">
-                <div class="logo-wrapper flex align-center">
-                    <img src="assets/img/logo.svg" alt="site logo">
+                <a href="index.html" class="logo-wrapper flex align-center">
+                    <img src="assets/img/logo.svg" alt="site logo" />
                     <span>luminae</span>
-                </div>
+                </a>
+
                 <div class="search-wrapper">
                     <div class="relative">
-                        <input type="text">
-                        <img src="assets/img/icons/search.svg" alt="search icon">
-                        <select name="category-select" id="">
+                        <input type="text" placeholder="Search products" aria-label="Search products" />
+                        <img src="assets/img/icons/search.svg" alt="search icon" />
+                        <select name="category-select" id="category-select" aria-label="Select category">
                             <option value="all-categories" selected>all-categories</option>
                             <option value="electronics">electronics</option>
                             <option value="clothes">clothes</option>
                         </select>
                     </div>
                 </div>
+
                 <div class="navigation-wrapper">
-                    <nav>
+                    <nav aria-label="Primary">
                         <ul class="flex align-center">
-                            <li>
-                                <a href="#">about us</a>
-                            </li>
-                            <li>
-                                <a href="#">blog</a>
-                            </li>
-                            <li>
-                                <a href="#">contact us</a>
-                            </li>
-                            <li>
-                                <a href="#">help & support</a>
-                            </li>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">blog</a></li>
+                            <li><a href="#">contact us</a></li>
+                            <li><a href="#">help & support</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="socials-wrapper flex align-center">
 
+                <div class="socials-wrapper flex align-center" aria-label="Social links">
                     <a href="#">
-                        <img src="assets/img/icons/instagram.svg" alt="instagram social icon">
+                        <img src="assets/img/icons/instagram.svg" alt="instagram social icon" />
                     </a>
                     <a href="#">
-                        <img src="assets/img/icons/facebook.svg" alt="facebook social icon">
+                        <img src="assets/img/icons/facebook.svg" alt="facebook social icon" />
                     </a>
                     <a href="#">
-                        <img src="assets/img/icons/telegram.svg" alt="telegram social icon">
+                        <img src="assets/img/icons/telegram.svg" alt="telegram social icon" />
                     </a>
                 </div>
             </div>
         </div>
-        <div class="header-wrapper bg-gray align-center ">
-            <div class="container">
-                <div class="flex justify-between align-center">
-                        <div class="categories-wrapper flex align-center">
-                            <div class="categories flex align-center">
-                                <img src="assets/img/icons/categories.svg" alt="categories icon">
-                                <span>categories</span>
-                            </div>
-                            <div>
-                            <select name="currency">
-                                <option value="usd" selected>USD</option>
-                                <option value="geol">GEL</option>
-                            </select>
-                        </div>
-                        <div>
-                            <select name="language">
-                                <option value="english" selected>English</option>
-                                <option value="georgian">Georgian</option>
-                            </select>
-                        </div>
-                        </div>
-                    <div class="main-offer">
+
+        <!-- Middle header -->
+        <div class="header-wrapper bg-gray">
+            <div class="container flex justify-between align-center">
+                <div class="categories-wrapper flex align-center">
+                    <div class="categories flex align-center">
+                        <img src="assets/img/icons/categories.svg" alt="categories icon" />
+                        <span>categories</span>
+                    </div>
+
+                    <div>
+                        <select name="currency" aria-label="Select currency">
+                            <option value="usd" selected>USD</option>
+                            <option value="gel">GEL</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <select name="language" aria-label="Select language">
+                            <option value="english" selected>English</option>
+                            <option value="georgian">Georgian</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="main-offer">
                     <article class="offer-card flex align-center">
                         <div class="offer-image-wrapper">
-                            <img src="assets/img/men-cosmetic.png" alt="men cosmetic">
+                            <img src="assets/img/men-cosmetic.png" alt="men cosmetic" />
                         </div>
                         <div class="offer-text-content">
                             <p>Weekly Men's Toiletries Coupons.</p>
@@ -91,14 +90,15 @@
                         </div>
                     </article>
                 </div>
+
                 <div class="cta-wrapper">
                     <div class="cta-login flex align-center">
                         <a href="#" class="flex align-center">
-                            <img src="assets/img/icons/sign-in.svg" alt="sign in icon">
+                            <img src="assets/img/icons/sign-in.svg" alt="sign in icon" />
                             <span>sign in</span>
                         </a>
                         <a href="#" class="flex align-center">
-                            <img src="assets/img/icons/favorites.svg" alt="favorites icon">
+                            <img src="assets/img/icons/favorites.svg" alt="favorites icon" />
                             <span>favorites</span>
                         </a>
                         <a href="assets/pages/cart.html" class="flex align-center">
@@ -108,40 +108,50 @@
                         </a>
                     </div>
                 </div>
-                </div>
-                
             </div>
         </div>
+
+        <!-- Categories menu -->
         <div class="container">
             <ul class="ecommerce-categories flex justify-between align-center">
-                <li>woman
+                <li>
+                    woman
                     <div class="submenu"></div>
                 </li>
-                <li>male
+                <li>
+                    male
                     <div class="submenu"></div>
                 </li>
-                <li>mother-child
+                <li>
+                    mother-child
                     <div class="submenu"></div>
                 </li>
-                <li>home & furnifure
+                <li>
+                    home & furnifure
                     <div class="submenu"></div>
                 </li>
-                <li>super market
+                <li>
+                    super market
                     <div class="submenu"></div>
                 </li>
-                <li>cosmetics
+                <li>
+                    cosmetics
                     <div class="submenu"></div>
                 </li>
-                <li>shoe & bag
+                <li>
+                    shoe & bag
                     <div class="submenu"></div>
                 </li>
-                <li>electronic
+                <li>
+                    electronic
                     <div class="submenu"></div>
                 </li>
-                <li>sport & outdoor
+                <li>
+                    sport & outdoor
                     <div class="submenu"></div>
                 </li>
-                <li>best seller
+                <li>
+                    best seller
                     <div class="submenu"></div>
                 </li>
             </ul>
@@ -156,37 +166,36 @@
                     <h1>Kimonos, Caftans & Pareos</h1>
                     <p>Poolside glam included From $4.99</p>
                     <button class="flex align-center">
-                        <img src="assets/img/icons/shop-now.svg" alt="shop now icon">
+                        <img src="assets/img/icons/shop-now.svg" alt="shop now icon" />
                         <span>Shop now</span>
                     </button>
                 </div>
             </div>
             <div class="essential-off">
-                    <div class="essential-header">
-                        <p>Summer Essentials</p>
-                        <span>20% off</span>
-                    </div>
-                    <div class="essential-footer">
-                        <p>19 Jul-30 Jul</p>
-                    </div>
+                <div class="essential-header">
+                    <p>Summer Essentials</p>
+                    <span>20% off</span>
+                </div>
+                <div class="essential-footer">
+                    <p>19 Jul-30 Jul</p>
+                </div>
             </div>
         </section>
+
         <section class="flash-sales">
             <div class="container">
                 <div class="flex align-center justify-between">
                     <h2>Flash Sales</h2>
                     <a href="#">See All</a>
                 </div>
-                <div class="products-wrapper flex align-center justify-between">
-                   
-                </div>
+                <div class="products-wrapper flex align-center justify-between"></div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer></footer>
 
-    </footer>
+    <script src="assets/js/data.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 

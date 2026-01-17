@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
      <header>
         <div class="container">
             <div class="header-wrapper flex justify-between align-center">
-                <div class="logo-wrapper flex align-center">
+                <a href="../../index.html" class="logo-wrapper flex align-center">
                     <img src="../img/logo.svg" alt="site logo">
                     <span>luminae</span>
-                </div>
+                </a>
                 <div class="search-wrapper">
                     <div class="relative">
-                        <input type="text">
+                        <input type="text" placeholder="Search products" aria-label="Search products">
                         <img src="../img/icons/search.svg" alt="search icon">
-                        <select name="category-select" id="">
+                        <select name="category-select" aria-label="Category">
                             <option value="all-categories" selected>all-categories</option>
                             <option value="electronics">electronics</option>
                             <option value="clothes">clothes</option>
@@ -66,13 +66,13 @@
                                 <span>categories</span>
                             </div>
                             <div>
-                            <select name="currency">
+                            <select name="currency" aria-label="Currency">
                                 <option value="usd" selected>USD</option>
-                                <option value="geol">GEL</option>
+                                <option value="gel">GEL</option>
                             </select>
                         </div>
                         <div>
-                            <select name="language">
+                            <select name="language" aria-label="Language">
                                 <option value="english" selected>English</option>
                                 <option value="georgian">Georgian</option>
                             </select>
@@ -151,40 +151,18 @@
                 <div class="flex">
                     <div class="list">
                         <h1>cart</h1>
-                        <ul>
-                            <li class="flex">
-                                <div class="left flex align-center ">
-                                    <div class="flex align-center">
-                                        <img src="../img/cart/mango-set.png" alt="mango set product image">
-                                        <h2 class="title">2 Pieces Mango set- Regular fit</h2>
-                                    </div>
-                                    <span class="price">
-                                        $ 25
-                                    </span>
-                                </div>
-                                <div class="right flex align-center">
-                                    <div class="quantity">
-                                        <button>-</button>
-                                        <input type="text">
-                                        <button>+</button>
-                                    </div>
-                                    <div class="total">
-                                        $ 25
-                                    </div>
-                                    <button class="remove">
-                                        <img src="../img/icons/trash.svg" alt="trash icon">
-                                    </button>
-                                </div>
-                            </li>
+                        <ul class="cart-items-list">
+                            <!-- here goes dynamic content -->
                         </ul>
                     </div>
-                    <div class="summary">
-
+                    <div class="summary" aria-live="polite">
+                        Total Summary <span id="total-sum">$ 0.00</span>
                     </div>
                 </div>
     
             </section>
         </div>
     </main>
+    <script src="../js/app.js"></script>
 </body>
 </html>
